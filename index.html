@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Reverse Grapher</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--N'oldu? Kodu mu merak ettin? Made by ahmo. 😆-->
+    <div id="menuScreen" class="screen">
+        <h1 class="game-title">Fonksiyon<span class="highlight">La!</span></h1>
+        <p class="subtitle">Matematikten nefret edenlere, <span class="ahmettext">Ahmet tarafından geliştirildi.</span></p>
+        
+        <div class="settings">
+            <label class="switch">
+                <input type="checkbox" id="includeAbs">
+                <span class="slider round"></span>
+            </label>
+            <span class="label-text">Mutlak Değer Dahil (|x|)</span>
+        </div>
+
+        <button id="startBtn" class="btn primary-btn">OYNA</button>
+    </div>
+
+    <div id="gameScreen" class="screen hidden">
+        <div class="top-bar">
+            <button id="backBtn" class="btn sm-btn">← Menü</button>
+            <div class="score-board">Skor: <span id="score">0</span></div>
+        </div>
+
+        <canvas id="graphCanvas"></canvas>
+
+        <div class="control-panel">
+            <div class="input-group">
+                <span>f(x) =</span>
+                <input type="text" id="guessInput" placeholder="Örn: 2x + 1">
+            </div>
+            <button id="checkBtn" class="btn action-btn">KONTROL ET</button>
+        </div>
+        
+        <div id="messageBox" class="message"></div>
+
+        <div class="ai-container">
+            <button id="aiBtn" class="ai-btn">
+                <span class="sparkle">✨</span> AI İpucu İste
+            </button>
+            <div id="aiOutput" class="ai-text"></div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
