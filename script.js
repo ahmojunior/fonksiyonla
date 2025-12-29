@@ -182,17 +182,20 @@ function checkAnswer() {
         showMessage("Boş bırakmak yooook...", "error");
         return;
     }
+    // mutlak değer yazarken abs() gerekiyordu, düzelttim.
+    const cleanedGuess = userGuess.replace(/\|([^|]+)\|/g, 'abs($1)');
 
     try {
         let isCorrect = true;
         for (let x = -5; x <= 5; x++) {
             const targetY = math.evaluate(currentFunctionStr, { x: x });
-            const userY = math.evaluate(userGuess, { x: x });
+            const userY = math.evaluate(cleanedGuess, { x: x });
 
             if (Math.abs(targetY - userY) > 0.01) {
                 isCorrect = false;
                 break;
             }
+            
         }
 
         if (isCorrect) {
@@ -200,13 +203,13 @@ function checkAnswer() {
             showMessage("Helal olsun, ben yapamazdım.", "success");
             score += 10;
             scoreEl.innerText = score;
-            drawFunction(userGuess, '#4cd137', 2);
+            drawFunction(cleanedGuess, '#4cd137', 2);
 
             setTimeout(generateNewLevel, 2000);
         } else {
             // PUHAHAHAHAHAHAHAHAHAHAAHAH 
             showMessage("Yanlış, Caner Hoca'yı dinlemeliydin.", "error");
-            drawFunction(userGuess, '#e84118', 2);
+            drawFunction(cleanedGuess, '#e84118', 2);
             setTimeout(drawScene, 1500);
         }
 
