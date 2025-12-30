@@ -85,6 +85,12 @@ function generateNewLevel() {
         currentFunctionStr = `${a} * abs(x + ${b})`;
     }
 
+    if (typeof aiOutput !== 'undefined') {
+        aiOutput.innerHTML = ""; 
+        aiBtn.innerHTML = '<span class="sparkle">✨</span> AI İpucu İste'; 
+        aiBtn.disabled = false; 
+    }
+
     guessInput.value = "";
     messageBox.innerText = "";
     messageBox.className = "message";
