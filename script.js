@@ -112,34 +112,30 @@ function drawScene() {
 
 function drawGrid() {
     ctx.beginPath();
-    ctx.strokeStyle = '#444';
+    ctx.strokeStyle = '#444'; 
     ctx.lineWidth = 1;
     ctx.fillStyle = '#888';
     ctx.font = "12px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
 
-    ctx.moveTo(0, offsetY);
-    ctx.lineTo(canvas.width, offsetY);
 
-    // hah! baba for döngüsü de yazıyor :) 
     for (let i = -X_LIMIT; i <= X_LIMIT; i++) {
-        if (i === 0) continue;
+        if (i === 0) continue; 
         const xPos = offsetX + (i * scale);
 
+        
         if (xPos < 0 || xPos > canvas.width) continue;
 
         ctx.moveTo(xPos, 0);
         ctx.lineTo(xPos, canvas.height);
 
+        
         ctx.fillText(i, xPos, offsetY + 15);
     }
 
-    ctx.moveTo(offsetX, 0);
-    ctx.lineTo(offsetX, canvas.height);
-
     for (let i = -Y_LIMIT; i <= Y_LIMIT; i++) {
-        if (i === 0) continue;
+        if (i === 0) continue; 
         const yPos = offsetY - (i * scale);
         
         if (yPos < 0 || yPos > canvas.height) continue;
@@ -147,10 +143,24 @@ function drawGrid() {
         ctx.moveTo(0, yPos);
         ctx.lineTo(canvas.width, yPos);
 
+        
         ctx.fillText(i, offsetX + 15, yPos);
     }
-
     ctx.stroke();
+
+    
+    ctx.beginPath();
+    ctx.strokeStyle = '#dcdcdc'; 
+    ctx.lineWidth = 2.5;         
+
+    
+    ctx.moveTo(0, offsetY);
+    ctx.lineTo(canvas.width, offsetY);
+    
+    ctx.moveTo(offsetX, 0);
+    ctx.lineTo(offsetX, canvas.height);
+
+    ctx.stroke(); 
 }
 
 // fonskiyon çizen fonksiyon... AI olmasa hayatta böyle matematik yapamazdım sanırım. insanlar neler buluyor be...
