@@ -4,6 +4,9 @@
 
 body {
     background-color: #1e1e1e;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(0, 168, 255, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(106, 55, 209, 0.034) 0%, transparent 40%);
     color: #f0f0f0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
