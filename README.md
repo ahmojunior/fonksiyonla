@@ -1,6 +1,6 @@
 # fonksiyonla
 A Turkish math game about functions and graphs.   
-![](https://img.shields.io/badge/Python-blue?logo=python&logoColor=white&color=blue) ![GitHub License](https://img.shields.io/github/license/ahmojunior/fonksiyonla) ![](https://img.shields.io/badge/%2305A8FF-blue?logoColor=white&label=theme&color=%2305A8FF) 
+![](https://img.shields.io/badge/Javascript-yellow?logo=python&logoColor=white&color=white) ![GitHub License](https://img.shields.io/github/license/ahmojunior/fonksiyonla) ![](https://img.shields.io/badge/%2305A8FF-blue?logoColor=white&label=theme&color=%2305A8FF) 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ahmojunior/fonksiyonla/main/banner.png" alt="banner" />
 </p>
